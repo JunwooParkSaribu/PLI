@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.siret.prank.domain.loaders.electrostatics.DelphiCubeLoaderTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-12-15T22:11:47" hostname="macbook-air-de-junwoo.home" time="6.196">
+  <properties/>
+  <testcase name="testSerializeDeserialize" classname="cz.siret.prank.domain.loaders.electrostatics.DelphiCubeLoaderTest" time="2.999"/>
+  <testcase name="testLoadFromFileGz" classname="cz.siret.prank.domain.loaders.electrostatics.DelphiCubeLoaderTest" time="3.197"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

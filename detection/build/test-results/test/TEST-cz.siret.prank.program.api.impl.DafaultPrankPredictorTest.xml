@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.siret.prank.program.api.impl.DafaultPrankPredictorTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-12-15T22:12:02" hostname="macbook-air-de-junwoo.home" time="86.87">
+  <properties/>
+  <testcase name="predict" classname="cz.siret.prank.program.api.impl.DafaultPrankPredictorTest" time="77.575"/>
+  <testcase name="runPrediction" classname="cz.siret.prank.program.api.impl.DafaultPrankPredictorTest" time="9.295"/>
+  <system-out><![CDATA[predicting pockets for proteins from dataset [1fbl.pdb.gz]
+processing [1fbl.pdb.gz] (1/1)
+predicting pockets finished in 0 hours 0 minutes 11.500 seconds
+predicting pockets for proteins from dataset [1fbl.cif]
+processing [1fbl.cif] (1/1)
+predicting pockets finished in 0 hours 0 minutes 8.313 seconds
+predicting pockets for proteins from dataset [2W83.pdb]
+processing [2W83.pdb] (1/1)
+predicting pockets finished in 0 hours 0 minutes 7.806 seconds
+predicting pockets for proteins from dataset [2W83.cif]
+processing [2W83.cif] (1/1)
+predicting pockets finished in 0 hours 0 minutes 7.905 seconds
+predicting pockets for proteins from dataset [1a82a.pdb]
+processing [1a82a.pdb] (1/1)
+predicting pockets finished in 0 hours 0 minutes 7.654 seconds
+predicting pockets for proteins from dataset [1aaxa.pdb]
+processing [1aaxa.pdb] (1/1)
+predicting pockets finished in 0 hours 0 minutes 7.925 seconds
+predicting pockets for proteins from dataset [1nlu.pdb]
+processing [1nlu.pdb] (1/1)
+predicting pockets finished in 0 hours 0 minutes 7.998 seconds
+predicting pockets for proteins from dataset [1t7qa.pdb]
+processing [1t7qa.pdb] (1/1)
+predicting pockets finished in 0 hours 0 minutes 10.824 seconds
+predicting pockets for proteins from dataset [2ck3b.pdb]
+processing [2ck3b.pdb] (1/1)
+predicting pockets finished in 0 hours 0 minutes 6.248 seconds
+predicting pockets for proteins from dataset [2W83.pdb]
+processing [2W83.pdb] (1/1)
+predicting pockets finished in 0 hours 0 minutes 9.082 seconds
+results saved to directory [/Users/junwoopark/Desktop/Junwoo/Faculty/Master/M2/MEETU/p2rank/distro/test_output/predict_2W83_test]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

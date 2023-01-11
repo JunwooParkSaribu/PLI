@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.siret.prank.domain.DatasetTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-12-15T22:11:45" hostname="macbook-air-de-junwoo.home" time="2.528">
+  <properties/>
+  <testcase name="testReducedStructresWithSpecifiedLigands" classname="cz.siret.prank.domain.DatasetTest" time="0.725"/>
+  <testcase name="testReducedStructures" classname="cz.siret.prank.domain.DatasetTest" time="0.325"/>
+  <testcase name="secondaryStructureAssignment" classname="cz.siret.prank.domain.DatasetTest" time="1.037"/>
+  <testcase name="testLigandDefinitionsAndSpecificLigandsLoading" classname="cz.siret.prank.domain.DatasetTest" time="0.441"/>
+  <system-out><![CDATA[processing [2W83.pdb] (1/10)
+processing [2W83.pdb] (6/10)
+processing [2W83.pdb] (3/10)
+processing [2W83.pdb] (7/10)
+processing [2W83.pdb] (2/10)
+processing [2W83.pdb] (4/10)
+processing [2W83.pdb] (8/10)
+processing [2W83.pdb] (9/10)
+processing [2W83.pdb] (5/10)
+processing [2W83.pdb] (10/10)
+processing [2W83.pdb] (1/11)
+processing [2W83.pdb] (2/11)
+processing [2W83.pdb] (3/11)
+processing [2W83.pdb] (4/11)
+processing [2W83.pdb] (5/11)
+processing [2W83.pdb] (6/11)
+processing [2W83.pdb] (7/11)
+processing [2W83.pdb] (8/11)
+processing [2W83.pdb] (9/11)
+processing [2W83.pdb] (10/11)
+processing [2W83.pdb] (11/11)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

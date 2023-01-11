@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.siret.prank.StructureParsingTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-12-15T22:11:37" hostname="macbook-air-de-junwoo.home" time="7.586">
+  <properties/>
+  <testcase name="pdbVsCifEquality" classname="cz.siret.prank.StructureParsingTest" time="7.586"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/Users/junwoopark/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-slf4j-impl/2.19.0/1a0c9615ba9fd5b96db8c1136afbef4394286e93/log4j-slf4j-impl-2.19.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+]]></system-err>
+</testsuite>

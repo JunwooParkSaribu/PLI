@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.siret.prank.features.implementation.histogram.DistancePairHistTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-12-15T22:11:55" hostname="macbook-air-de-junwoo.home" time="0.013">
+  <properties/>
+  <testcase name="testSharp" classname="cz.siret.prank.features.implementation.histogram.DistancePairHistTest" time="0.009"/>
+  <testcase name="testSharp3" classname="cz.siret.prank.features.implementation.histogram.DistancePairHistTest" time="0.002"/>
+  <testcase name="testSmooth" classname="cz.siret.prank.features.implementation.histogram.DistancePairHistTest" time="0.001"/>
+  <testcase name="testSmooth3" classname="cz.siret.prank.features.implementation.histogram.DistancePairHistTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

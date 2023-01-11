@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.siret.prank.prediction.pockets.results.ClassifierStatsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-12-15T22:12:02" hostname="macbook-air-de-junwoo.home" time="0.008">
+  <properties/>
+  <testcase name="testCalcMCC" classname="cz.siret.prank.prediction.pockets.results.ClassifierStatsTest" time="0.008"/>
+  <system-out><![CDATA[0.2996986773590165
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

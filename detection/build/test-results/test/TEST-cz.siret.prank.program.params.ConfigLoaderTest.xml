@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.siret.prank.program.params.ConfigLoaderTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-12-15T22:13:29" hostname="macbook-air-de-junwoo.home" time="0.192">
+  <properties/>
+  <testcase name="testDefaultParams" classname="cz.siret.prank.program.params.ConfigLoaderTest" time="0.163"/>
+  <testcase name="testOverride" classname="cz.siret.prank.program.params.ConfigLoaderTest" time="0.029"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

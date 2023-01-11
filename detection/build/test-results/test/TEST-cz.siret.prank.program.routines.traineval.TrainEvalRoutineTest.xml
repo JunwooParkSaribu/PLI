@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.siret.prank.program.routines.traineval.TrainEvalRoutineTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-12-15T22:13:29" hostname="macbook-air-de-junwoo.home" time="18.056">
+  <properties/>
+  <testcase name="testTrainEvalFeatureImportances" classname="cz.siret.prank.program.routines.traineval.TrainEvalRoutineTest" time="4.64"/>
+  <testcase name="testTrainEvalFF" classname="cz.siret.prank.program.routines.traineval.TrainEvalRoutineTest" time="2.763"/>
+  <testcase name="testTrainEvalRF" classname="cz.siret.prank.program.routines.traineval.TrainEvalRoutineTest" time="3.009"/>
+  <testcase name="testTrainEvalFF2" classname="cz.siret.prank.program.routines.traineval.TrainEvalRoutineTest" time="2.39"/>
+  <testcase name="testTrainEvalFRF" classname="cz.siret.prank.program.routines.traineval.TrainEvalRoutineTest" time="2.602"/>
+  <testcase name="testTrainEvalResidueMode" classname="cz.siret.prank.program.routines.traineval.TrainEvalRoutineTest" time="2.652"/>
+  <system-out><![CDATA[collecting vectors from dataset [fpocket.ds]
+processing [1a82a_out.pdb] (1/4)
+processing [1aaxa_out.pdb] (2/4)
+processing [1t7qa_out.pdb] (3/4)
+processing [2ck3b_out.pdb] (4/4)
+processed 8 ligands in 4 files
+extracted 5826 vectors...  positives:688 negatives:5138 ratio:0.1339
+preparing instance dataset....
+collecting vectors finished in 0 hours 0 minutes 1.314 seconds
+vectors collected in 0 hours 0 minutes 1.328 seconds
+training model using 9 threads
+training classifier cz.siret.prank.fforest.FasterForest on dataset with 5826 instances
+model trained in 0 hours 0 minutes 1.540 seconds
+Saving feature importances to file [distro/test_output/traineval_test/feature_importances.csv]
+model prepared in 0 hours 0 minutes 1.580 seconds
+evaluating results on dataset [test.ds]
+processing [1a82a.pdb] (1/5)
+processing [1aaxa.pdb] (2/5)
+processing [1nlu.pdb] (3/5)
+processing [1t7qa.pdb] (4/5)
+processing [2ck3b.pdb] (5/5)
+
+
+classifier:  FasterForest 
+
+	TN   	 FP	 (spc)
+	FN   	 TP	 (r)
+	(npv)	(p)
+
+N:	19166.0	 544.0 positives + 18622.0 negatives	 Ratio: 0.0292
+pred:  	 [0]	  [1]
+obs[0] 	 17807.0	  815.0	 95.6
+obs[1] 	 161.0	  383.0	 70.4
+       	 99.1	  32.0
+
+%:
+	 92.9	 4.3
+	 .8	 2.0
+
+ACC:	 0.9491	 accuracy
+P:	 0.3197	 precision / positive predictive value    		TP / (TP + FP)
+R:	 0.704	 recall / sensitivity / true positive rate		TP / (TP + FN)
+NPV:	 0.991	 negative predictive value       		TN / (TN + FN)
+SPC:	 0.9562	 specificity / true negative rate		TN / (TN + FP)
+
+TPX:	 0.2818	 TP / (TP + FN + FP)
+AUPRC:	 0.5187	 area under PR curve
+AUC:	 0.9211	 area under ROC curve
+F1:	 0.4397	 f-measure
+MCC:	 0.453	 Matthews correlation coefficient
+
+
+
+
+Success Rates:
+tolerances:	[0]	[1]	[2]	[4]	[10]	[99]
+DCA(1.0)	20.0	20.0	20.0	20.0	20.0	20.0
+DCA(2.0)	60.0	60.0	60.0	60.0	60.0	60.0
+DCA(3.0)	70.0	70.0	70.0	70.0	70.0	70.0
+DCA(4.0)	70.0	70.0	70.0	70.0	70.0	70.0
+DCA(5.0)	70.0	70.0	90.0	90.0	90.0	90.0
+DCA(6.0)	70.0	70.0	90.0	90.0	90.0	90.0
+DCA(7.0)	80.0	80.0	100.0	100.0	100.0	100.0
+DCA(8.0)	80.0	80.0	100.0	100.0	100.0	100.0
+DCA(9.0)	80.0	80.0	100.0	100.0	100.0	100.0
+DCA(10.0)	80.0	80.0	100.0	100.0	100.0	100.0
+DCA(11.0)	80.0	80.0	100.0	100.0	100.0	100.0
+DCA(12.0)	80.0	80.0	100.0	100.0	100.0	100.0
+DCA(13.0)	80.0	80.0	100.0	100.0	100.0	100.0
+DCA(14.0)	80.0	80.0	100.0	100.0	100.0	100.0
+DCA(15.0)	80.0	80.0	100.0	100.0	100.0	100.0
+DCC(1.0)	.0	.0	.0	.0	.0	.0
+DCC(2.0)	10.0	10.0	10.0	10.0	10.0	10.0
+DCC(3.0)	20.0	20.0	20.0	20.0	20.0	20.0
+DCC(4.0)	20.0	20.0	20.0	20.0	20.0	20.0
+DCC(5.0)	30.0	30.0	30.0	30.0	30.0	30.0
+DCC(6.0)	40.0	40.0	50.0	50.0	50.0	50.0
+DCC(7.0)	50.0	50.0	70.0	70.0	70.0	70.0
+DCC(8.0)	70.0	70.0	90.0	90.0	90.0	90.0
+DCC(9.0)	80.0	80.0	100.0	100.0	100.0	100.0
+DCC(10.0)	80.0	80.0	100.0	100.0	100.0	100.0
+DSO(0.7)	.0	.0	.0	.0	.0	.0
+DSO(0.6)	10.0	10.0	10.0	10.0	10.0	10.0
+DSO(0.5)	10.0	10.0	10.0	10.0	10.0	10.0
+DSO(0.4)	10.0	10.0	10.0	10.0	10.0	10.0
+DSO(0.3)	30.0	30.0	40.0	40.0	40.0	40.0
+DSO(0.2)	60.0	60.0	70.0	70.0	70.0	70.0
+DSO(0.1)	80.0	80.0	90.0	90.0	90.0	90.0
+DSWO(1.0;0.2)	30.0	30.0	30.0	30.0	30.0	30.0
+DSWO(0.9;0.2)	40.0	40.0	40.0	40.0	40.0	40.0
+DSWO(0.8;0.2)	60.0	60.0	60.0	60.0	60.0	60.0
+DSWO(0.7;0.2)	60.0	60.0	60.0	60.0	60.0	60.0
+DSWO(0.6;0.2)	60.0	60.0	70.0	70.0	70.0	70.0
+DSWO(0.5;0.2)	60.0	60.0	70.0	70.0	70.0	70.0
+DSWO(0.4;0.2)	60.0	60.0	70.0	70.0	70.0	70.0
+DSWO(0.3;0.2)	60.0	60.0	70.0	70.0	70.0	70.0
+DSWO(0.2;0.2)	60.0	60.0	70.0	70.0	70.0	70.0
+DSWO(0.1;0.2)	60.0	60.0	70.0	70.0	70.0	70.0
+
+
+processed 0 ligands in 5 files
+model evaluation finished in 0 hours 0 minutes 1.560 seconds
+results saved to directory [/Users/junwoopark/Desktop/Junwoo/Faculty/Master/M2/MEETU/p2rank/distro/test_output/traineval_test]
+evaluation routine on dataset [test.ds] finished in 0 hours 0 minutes 1.568 seconds
+collecting vectors from dataset [fpocket.ds]
+processing [1a82a_out.pdb] (1/4)
+processing [1aaxa_out.pdb] (2/4)
+processing [1t7qa_out.pdb] (3/4)
+processing [2ck3b_out.pdb] (4/4)
+processed 8 ligands in 4 files
+extracted 5826 vectors...  positives:688 negatives:5138 ratio:0.1339
+preparing instance dataset....
+collecting vectors finished in 0 hours 0 minutes 1.161 seconds
+vectors collected in 0 hours 0 minutes 1.168 seconds
+training model using 9 threads
+training classifier cz.siret.prank.fforest.FasterForest on dataset with 5826 instances
+model trained in 0 hours 0 minutes 0.257 seconds
+model prepared in 0 hours 0 minutes 0.258 seconds
+evaluating results on dataset [test.ds]
+processing [1a82a.pdb] (1/5)
+processing [1aaxa.pdb] (2/5)
+processing [1nlu.pdb] (3/5)
+processing [1t7qa.pdb] (4/5)
+processing [2ck3b.pdb] (5/5)
+
+
+classifier:  FasterForest 
+
+	TN   	 FP	 (spc)
+	FN   	 TP	 (r)
+	(npv)	(p)
+
+N:	19166.0	 544.0 positives + 18622.0 negatives	 Ratio: 0.0292
+pred:  	 [0]	  [1]
+obs[0] 	 17807.0	  815.0	 95.6
+obs[1] 	 161.0	  383.0	 70.4
+       	 99.1	  32.0
+
+%:
+	 92.9	 4.3
+	 .8	 2.0
+
+ACC:	 0.9491	 accuracy
+P:	 0.3197	 precision / positive predictive value    		TP / (TP + FP)
+R:	 0.704	 recall / sensitivity / true positive rate		TP / (TP + FN)
+NPV:	 0.991	 negative predictive value       		TN / (TN + FN)
+SPC:	 0.9562	 specificity / true negative rate		TN / (TN + FP)
+
+TPX:	 0.2818	 TP / (TP + FN + FP)
+AUPRC:	 0.5187	 area under PR curve
+AUC:	 0.9211	 area under ROC curve
+F1:	 0.4397	 f-measure
+MCC:	 0.453	 Matthews correlation coefficient
+
+
+
+
+Success Rates:
+tolerances:	[0]	[1]	[2]	[4]	[10]	[99]
+DCA(1.0)	20.0	20.0	20.0	20.0	20.0	20.0
+DCA(2.0)	60.0	60.0	60.0	60.0	60.0	60.0
+DCA(3.0)	70.0	70.0	70.0	70.0	70.0	70.0
+DCA(4.0)	70.0	70.0	70.0	70.0	70.0	70.0
+DCA(5.0)	70.0	70.0	90.0	90.0	90.0	90.0
+DCA(6.0)	70.0	70.0	90.0	90.0	90.0	90.0
+DCA(7.0)	80.0	80.0	100.0	100.0	100.0	100.0
+DCA(8.0)	80.0	80.0	100.0	100.0	100.0	100.0
+DCA(9.0)	80.0	80.0	100.0	100.0	100.0	100.0
+DCA(10.0)	80.0	80.0	100.0	100.0	100.0	100.0
+DCA(11.0)	80.0	80.0	100.0	100.0	100.0	100.0
+DCA(12.0)	80.0	80.0	100.0	100.0	100.0	100.0
+DCA(13.0)	80.0	80.0	100.0	100.0	100.0	100.0
+DCA(14.0)	80.0	80.0	100.0	100.0	100.0	100.0
+DCA(15.0)	80.0	80.0	100.0	100.0	100.0	100.0
+DCC(1.0)	.0	.0	.0	.0	.0	.0
+DCC(2.0)	10.0	10.0	10.0	10.0	10.0	10.0
+DCC(3.0)	20.0	20.0	20.0	20.0	20.0	20.0
+DCC(4.0)	20.0	20.0	20.0	20.0	20.0	20.0
+DCC(5.0)	30.0	30.0	30.0	30.0	30.0	30.0
+DCC(6.0)	40.0	40.0	50.0	50.0	50.0	50.0
+DCC(7.0)	50.0	50.0	70.0	70.0	70.0	70.0
+DCC(8.0)	70.0	70.0	90.0	90.0	90.0	90.0
+DCC(9.0)	80.0	80.0	100.0	100.0	100.0	100.0
+DCC(10.0)	80.0	80.0	100.0	100.0	100.0	100.0
+DSO(0.7)	.0	.0	.0	.0	.0	.0
+DSO(0.6)	10.0	10.0	10.0	10.0	10.0	10.0
+DSO(0.5)	10.0	10.0	10.0	10.0	10.0	10.0
+DSO(0.4)	10.0	10.0	10.0	10.0	10.0	10.0
+DSO(0.3)	30.0	30.0	40.0	40.0	40.0	40.0
+DSO(0.2)	60.0	60.0	70.0	70.0	70.0	70.0
+DSO(0.1)	80.0	80.0	90.0	90.0	90.0	90.0
+DSWO(1.0;0.2)	30.0	30.0	30.0	30.0	30.0	30.0
+DSWO(0.9;0.2)	40.0	40.0	40.0	40.0	40.0	40.0
+DSWO(0.8;0.2)	60.0	60.0	60.0	60.0	60.0	60.0
+DSWO(0.7;0.2)	60.0	60.0	60.0	60.0	60.0	60.0
+DSWO(0.6;0.2)	60.0	60.0	70.0	70.0	70.0	70.0
+DSWO(0.5;0.2)	60.0	60.0	70.0	70.0	70.0	70.0
+DSWO(0.4;0.2)	60.0	60.0	70.0	70.0	70.0	70.0
+DSWO(0.3;0.2)	60.0	60.0	70.0	70.0	70.0	70.0
+DSWO(0.2;0.2)	60.0	60.0	70.0	70.0	70.0	70.0
+DSWO(0.1;0.2)	60.0	60.0	70.0	70.0	70.0	70.0
+
+
+processed 0 ligands in 5 files
+model evaluation finished in 0 hours 0 minutes 1.241 seconds
+results saved to directory [/Users/junwoopark/Desktop/Junwoo/Faculty/Master/M2/MEETU/p2rank/distro/test_output/traineval_test]
+evaluation routine on dataset [test.ds] finished in 0 hours 0 minutes 1.242 seconds
+collecting vectors from dataset [fpocket.ds]
+processing [1a82a_out.pdb] (1/4)
+processing [1aaxa_out.pdb] (2/4)
+processing [1t7qa_out.pdb] (3/4)
+processing [2ck3b_out.pdb] (4/4)
+processed 8 ligands in 4 files
+extracted 5826 vectors...  positives:688 negatives:5138 ratio:0.1339
+preparing instance dataset....
+collecting vectors finished in 0 hours 0 minutes 1.249 seconds
+vectors collected in 0 hours 0 minutes 1.255 seconds
+training model using 9 threads
+training classifier weka.classifiers.trees.RandomForest on dataset with 5826 instances
+model trained in 0 hours 0 minutes 0.421 seconds
+model prepared in 0 hours 0 minutes 0.438 seconds
+evaluating results on dataset [test.ds]
+processing [1a82a.pdb] (1/5)
+processing [1aaxa.pdb] (2/5)
+processing [1nlu.pdb] (3/5)
+processing [1t7qa.pdb] (4/5)
+processing [2ck3b.pdb] (5/5)
+
+
+classifier:  RandomForest 
+
+	TN   	 FP	 (spc)
+	FN   	 TP	 (r)
+	(npv)	(p)
+
+N:	19166.0	 544.0 positives + 18622.0 negatives	 Ratio: 0.0292
+pred:  	 [0]	  [1]
+obs[0] 	 17900.0	  722.0	 96.1
+obs[1] 	 157.0	  387.0	 71.1
+       	 99.1	  34.9
+
+%:
+	 93.4	 3.8
+	 .8	 2.0
+
+ACC:	 0.9541	 accuracy
+P:	 0.349	 precision / positive predictive value    		TP / (TP + FP)
+R:	 0.7114	 recall / sensitivity / true positive rate		TP / (TP + FN)
+NPV:	 0.9913	 negative predictive value       		TN / (TN + FN)
+SPC:	 0.9612	 specificity / true negative rate		TN / (TN + FP)
+
+TPX:	 0.3057	 TP / (TP + FN + FP)
+AUPRC:	 0.4987	 area under PR curve
+AUC:	 0.9192	 area under ROC curve
+F1:	 0.4682	 f-measure
+MCC:	 0.4784	 Matthews correlation coefficient
+
+
+
+
+Success Rates:
+tolerances:	[0]	[1]	[2]	[4]	[10]	[99]
+DCA(1.0)	20.0	20.0	20.0	20.0	30.0	30.0
+DCA(2.0)	40.0	50.0	50.0	50.0	60.0	60.0
+DCA(3.0)	40.0	50.0	50.0	50.0	60.0	60.0
+DCA(4.0)	70.0	70.0	70.0	70.0	80.0	80.0
+DCA(5.0)	80.0	80.0	80.0	90.0	100.0	100.0
+DCA(6.0)	90.0	90.0	90.0	100.0	100.0	100.0
+DCA(7.0)	90.0	90.0	90.0	100.0	100.0	100.0
+DCA(8.0)	90.0	90.0	90.0	100.0	100.0	100.0
+DCA(9.0)	90.0	90.0	90.0	100.0	100.0	100.0
+DCA(10.0)	90.0	90.0	90.0	100.0	100.0	100.0
+DCA(11.0)	90.0	90.0	90.0	100.0	100.0	100.0
+DCA(12.0)	90.0	90.0	90.0	100.0	100.0	100.0
+DCA(13.0)	90.0	90.0	90.0	100.0	100.0	100.0
+DCA(14.0)	90.0	90.0	90.0	100.0	100.0	100.0
+DCA(15.0)	90.0	90.0	90.0	100.0	100.0	100.0
+DCC(1.0)	.0	.0	.0	.0	.0	.0
+DCC(2.0)	10.0	10.0	10.0	10.0	10.0	10.0
+DCC(3.0)	20.0	20.0	20.0	20.0	20.0	20.0
+DCC(4.0)	20.0	20.0	20.0	20.0	30.0	30.0
+DCC(5.0)	30.0	30.0	30.0	30.0	40.0	40.0
+DCC(6.0)	30.0	40.0	40.0	50.0	50.0	60.0
+DCC(7.0)	60.0	70.0	70.0	90.0	100.0	100.0
+DCC(8.0)	80.0	90.0	90.0	100.0	100.0	100.0
+DCC(9.0)	80.0	90.0	90.0	100.0	100.0	100.0
+DCC(10.0)	90.0	90.0	90.0	100.0	100.0	100.0
+DSO(0.7)	.0	.0	.0	.0	.0	.0
+DSO(0.6)	.0	.0	.0	.0	.0	.0
+DSO(0.5)	10.0	10.0	10.0	10.0	10.0	10.0
+DSO(0.4)	10.0	10.0	10.0	10.0	10.0	10.0
+DSO(0.3)	30.0	40.0	40.0	40.0	50.0	50.0
+DSO(0.2)	60.0	70.0	70.0	70.0	80.0	80.0
+DSO(0.1)	70.0	80.0	80.0	80.0	100.0	100.0
+DSWO(1.0;0.2)	30.0	30.0	30.0	30.0	30.0	30.0
+DSWO(0.9;0.2)	40.0	40.0	40.0	40.0	40.0	40.0
+DSWO(0.8;0.2)	60.0	70.0	70.0	70.0	80.0	80.0
+DSWO(0.7;0.2)	60.0	70.0	70.0	70.0	80.0	80.0
+DSWO(0.6;0.2)	60.0	70.0	70.0	70.0	80.0	80.0
+DSWO(0.5;0.2)	60.0	70.0	70.0	70.0	80.0	80.0
+DSWO(0.4;0.2)	60.0	70.0	70.0	70.0	80.0	80.0
+DSWO(0.3;0.2)	60.0	70.0	70.0	70.0	80.0	80.0
+DSWO(0.2;0.2)	60.0	70.0	70.0	70.0	80.0	80.0
+DSWO(0.1;0.2)	60.0	70.0	70.0	70.0	80.0	80.0
+
+
+processed 0 ligands in 5 files
+model evaluation finished in 0 hours 0 minutes 1.260 seconds
+results saved to directory [/Users/junwoopark/Desktop/Junwoo/Faculty/Master/M2/MEETU/p2rank/distro/test_output/traineval_test]
+evaluation routine on dataset [test.ds] finished in 0 hours 0 minutes 1.260 seconds
+collecting vectors from dataset [fpocket.ds]
+processing [1a82a_out.pdb] (1/4)
+processing [1aaxa_out.pdb] (2/4)
+processing [1t7qa_out.pdb] (3/4)
+processing [2ck3b_out.pdb] (4/4)
+processed 8 ligands in 4 files
+extracted 5826 vectors...  positives:688 negatives:5138 ratio:0.1339
+preparing instance dataset....
+collecting vectors finished in 0 hours 0 minutes 0.992 seconds
+vectors collected in 0 hours 0 minutes 0.993 seconds
+training model using 9 threads
+training classifier cz.siret.prank.fforest2.FasterForest2 on dataset with 5826 instances
+time spent sorting: 0 hours 0 minutes 0.060 seconds
+time spent building trees: 0 hours 0 minutes 0.168 seconds
+model trained in 0 hours 0 minutes 0.263 seconds
+model prepared in 0 hours 0 minutes 0.264 seconds
+evaluating results on dataset [test.ds]
+processing [1a82a.pdb] (1/5)
+processing [1aaxa.pdb] (2/5)
+processing [1nlu.pdb] (3/5)
+processing [1t7qa.pdb] (4/5)
+processing [2ck3b.pdb] (5/5)
+
+
+classifier:  FasterForest2 
+
+	TN   	 FP	 (spc)
+	FN   	 TP	 (r)
+	(npv)	(p)
+
+N:	19166.0	 544.0 positives + 18622.0 negatives	 Ratio: 0.0292
+pred:  	 [0]	  [1]
+obs[0] 	 17783.0	  839.0	 95.5
+obs[1] 	 177.0	  367.0	 67.5
+       	 99.0	  30.4
+
+%:
+	 92.8	 4.4
+	 .9	 1.9
+
+ACC:	 0.947	 accuracy
+P:	 0.3043	 precision / positive predictive value    		TP / (TP + FP)
+R:	 0.6746	 recall / sensitivity / true positive rate		TP / (TP + FN)
+NPV:	 0.9901	 negative predictive value       		TN / (TN + FN)
+SPC:	 0.9549	 specificity / true negative rate		TN / (TN + FP)
+
+TPX:	 0.2654	 TP / (TP + FN + FP)
+AUPRC:	 0.4843	 area under PR curve
+AUC:	 0.921	 area under ROC curve
+F1:	 0.4194	 f-measure
+MCC:	 0.4306	 Matthews correlation coefficient
+
+
+
+
+Success Rates:
+tolerances:	[0]	[1]	[2]	[4]	[10]	[99]
+DCA(1.0)	20.0	20.0	20.0	20.0	20.0	20.0
+DCA(2.0)	40.0	50.0	50.0	50.0	50.0	50.0
+DCA(3.0)	50.0	60.0	60.0	60.0	70.0	70.0
+DCA(4.0)	60.0	70.0	70.0	80.0	90.0	90.0
+DCA(5.0)	60.0	70.0	70.0	80.0	90.0	90.0
+DCA(6.0)	60.0	70.0	70.0	80.0	90.0	90.0
+DCA(7.0)	70.0	80.0	80.0	100.0	100.0	100.0
+DCA(8.0)	70.0	80.0	80.0	100.0	100.0	100.0
+DCA(9.0)	70.0	80.0	80.0	100.0	100.0	100.0
+DCA(10.0)	70.0	80.0	80.0	100.0	100.0	100.0
+DCA(11.0)	70.0	80.0	80.0	100.0	100.0	100.0
+DCA(12.0)	70.0	80.0	80.0	100.0	100.0	100.0
+DCA(13.0)	70.0	80.0	80.0	100.0	100.0	100.0
+DCA(14.0)	70.0	80.0	90.0	100.0	100.0	100.0
+DCA(15.0)	70.0	80.0	90.0	100.0	100.0	100.0
+DCC(1.0)	.0	.0	.0	.0	.0	.0
+DCC(2.0)	10.0	10.0	10.0	10.0	10.0	10.0
+DCC(3.0)	20.0	20.0	20.0	20.0	20.0	20.0
+DCC(4.0)	30.0	30.0	30.0	30.0	30.0	30.0
+DCC(5.0)	30.0	30.0	30.0	30.0	50.0	50.0
+DCC(6.0)	30.0	30.0	30.0	40.0	50.0	50.0
+DCC(7.0)	50.0	60.0	60.0	80.0	80.0	80.0
+DCC(8.0)	60.0	70.0	70.0	90.0	90.0	90.0
+DCC(9.0)	60.0	70.0	70.0	90.0	90.0	90.0
+DCC(10.0)	70.0	80.0	80.0	100.0	100.0	100.0
+DSO(0.7)	.0	.0	.0	.0	.0	.0
+DSO(0.6)	.0	.0	.0	.0	.0	.0
+DSO(0.5)	10.0	10.0	10.0	10.0	10.0	10.0
+DSO(0.4)	10.0	10.0	10.0	10.0	10.0	10.0
+DSO(0.3)	30.0	40.0	40.0	40.0	40.0	40.0
+DSO(0.2)	60.0	70.0	70.0	70.0	70.0	70.0
+DSO(0.1)	70.0	80.0	80.0	90.0	100.0	100.0
+DSWO(1.0;0.2)	20.0	20.0	20.0	20.0	20.0	20.0
+DSWO(0.9;0.2)	50.0	50.0	50.0	50.0	50.0	50.0
+DSWO(0.8;0.2)	60.0	60.0	60.0	60.0	60.0	60.0
+DSWO(0.7;0.2)	60.0	70.0	70.0	70.0	70.0	70.0
+DSWO(0.6;0.2)	60.0	70.0	70.0	70.0	70.0	70.0
+DSWO(0.5;0.2)	60.0	70.0	70.0	70.0	80.0	80.0
+DSWO(0.4;0.2)	60.0	70.0	70.0	80.0	90.0	90.0
+DSWO(0.3;0.2)	60.0	70.0	70.0	80.0	90.0	90.0
+DSWO(0.2;0.2)	60.0	70.0	70.0	80.0	90.0	90.0
+DSWO(0.1;0.2)	60.0	70.0	70.0	80.0	90.0	90.0
+
+
+processed 0 ligands in 5 files
+model evaluation finished in 0 hours 0 minutes 1.071 seconds
+results saved to directory [/Users/junwoopark/Desktop/Junwoo/Faculty/Master/M2/MEETU/p2rank/distro/test_output/traineval_test]
+evaluation routine on dataset [test.ds] finished in 0 hours 0 minutes 1.071 seconds
+collecting vectors from dataset [fpocket.ds]
+processing [1a82a_out.pdb] (1/4)
+processing [1aaxa_out.pdb] (2/4)
+processing [1t7qa_out.pdb] (3/4)
+processing [2ck3b_out.pdb] (4/4)
+processed 8 ligands in 4 files
+extracted 5826 vectors...  positives:688 negatives:5138 ratio:0.1339
+preparing instance dataset....
+collecting vectors finished in 0 hours 0 minutes 1.128 seconds
+vectors collected in 0 hours 0 minutes 1.130 seconds
+training model using 9 threads
+training classifier hr.irb.fastRandomForest.FastRandomForest on dataset with 5826 instances
+model trained in 0 hours 0 minutes 0.325 seconds
+model prepared in 0 hours 0 minutes 0.327 seconds
+evaluating results on dataset [test.ds]
+processing [1a82a.pdb] (1/5)
+processing [1aaxa.pdb] (2/5)
+processing [1nlu.pdb] (3/5)
+processing [1t7qa.pdb] (4/5)
+processing [2ck3b.pdb] (5/5)
+
+
+classifier:  FastRandomForest 
+
+	TN   	 FP	 (spc)
+	FN   	 TP	 (r)
+	(npv)	(p)
+
+N:	19166.0	 544.0 positives + 18622.0 negatives	 Ratio: 0.0292
+pred:  	 [0]	  [1]
+obs[0] 	 17751.0	  871.0	 95.3
+obs[1] 	 148.0	  396.0	 72.8
+       	 99.2	  31.3
+
+%:
+	 92.6	 4.5
+	 .8	 2.1
+
+ACC:	 0.9468	 accuracy
+P:	 0.3125	 precision / positive predictive value    		TP / (TP + FP)
+R:	 0.7279	 recall / sensitivity / true positive rate		TP / (TP + FN)
+NPV:	 0.9917	 negative predictive value       		TN / (TN + FN)
+SPC:	 0.9532	 specificity / true negative rate		TN / (TN + FP)
+
+TPX:	 0.2799	 TP / (TP + FN + FP)
+AUPRC:	 0.5558	 area under PR curve
+AUC:	 0.9284	 area under ROC curve
+F1:	 0.4373	 f-measure
+MCC:	 0.4553	 Matthews correlation coefficient
+
+
+
+
+Success Rates:
+tolerances:	[0]	[1]	[2]	[4]	[10]	[99]
+DCA(1.0)	20.0	20.0	20.0	20.0	20.0	20.0
+DCA(2.0)	50.0	50.0	50.0	50.0	50.0	50.0
+DCA(3.0)	50.0	60.0	60.0	60.0	60.0	60.0
+DCA(4.0)	60.0	70.0	70.0	80.0	80.0	80.0
+DCA(5.0)	60.0	70.0	70.0	80.0	90.0	90.0
+DCA(6.0)	60.0	70.0	70.0	80.0	90.0	90.0
+DCA(7.0)	60.0	70.0	70.0	80.0	90.0	90.0
+DCA(8.0)	70.0	80.0	80.0	100.0	100.0	100.0
+DCA(9.0)	70.0	80.0	80.0	100.0	100.0	100.0
+DCA(10.0)	70.0	80.0	80.0	100.0	100.0	100.0
+DCA(11.0)	70.0	80.0	80.0	100.0	100.0	100.0
+DCA(12.0)	70.0	80.0	80.0	100.0	100.0	100.0
+DCA(13.0)	70.0	80.0	80.0	100.0	100.0	100.0
+DCA(14.0)	70.0	80.0	80.0	100.0	100.0	100.0
+DCA(15.0)	70.0	80.0	80.0	100.0	100.0	100.0
+DCC(1.0)	.0	.0	.0	.0	.0	.0
+DCC(2.0)	10.0	10.0	10.0	10.0	10.0	10.0
+DCC(3.0)	20.0	20.0	20.0	20.0	20.0	20.0
+DCC(4.0)	20.0	20.0	20.0	20.0	20.0	20.0
+DCC(5.0)	30.0	30.0	30.0	40.0	40.0	40.0
+DCC(6.0)	30.0	30.0	30.0	40.0	40.0	40.0
+DCC(7.0)	50.0	60.0	60.0	70.0	80.0	80.0
+DCC(8.0)	50.0	60.0	60.0	70.0	80.0	80.0
+DCC(9.0)	70.0	80.0	80.0	100.0	100.0	100.0
+DCC(10.0)	70.0	80.0	80.0	100.0	100.0	100.0
+DSO(0.7)	.0	.0	.0	.0	.0	.0
+DSO(0.6)	.0	.0	.0	.0	.0	.0
+DSO(0.5)	10.0	10.0	10.0	10.0	10.0	10.0
+DSO(0.4)	20.0	20.0	20.0	20.0	20.0	20.0
+DSO(0.3)	30.0	30.0	30.0	30.0	30.0	30.0
+DSO(0.2)	50.0	60.0	60.0	70.0	70.0	70.0
+DSO(0.1)	70.0	80.0	80.0	90.0	90.0	90.0
+DSWO(1.0;0.2)	30.0	30.0	30.0	30.0	30.0	30.0
+DSWO(0.9;0.2)	50.0	50.0	50.0	50.0	50.0	50.0
+DSWO(0.8;0.2)	50.0	60.0	60.0	70.0	70.0	70.0
+DSWO(0.7;0.2)	50.0	60.0	60.0	70.0	70.0	70.0
+DSWO(0.6;0.2)	50.0	60.0	60.0	70.0	70.0	70.0
+DSWO(0.5;0.2)	50.0	60.0	60.0	70.0	70.0	70.0
+DSWO(0.4;0.2)	50.0	60.0	60.0	70.0	70.0	70.0
+DSWO(0.3;0.2)	50.0	60.0	60.0	70.0	70.0	70.0
+DSWO(0.2;0.2)	50.0	60.0	60.0	70.0	70.0	70.0
+DSWO(0.1;0.2)	50.0	60.0	60.0	70.0	70.0	70.0
+
+
+processed 0 ligands in 5 files
+model evaluation finished in 0 hours 0 minutes 1.087 seconds
+results saved to directory [/Users/junwoopark/Desktop/Junwoo/Faculty/Master/M2/MEETU/p2rank/distro/test_output/traineval_test]
+evaluation routine on dataset [test.ds] finished in 0 hours 0 minutes 1.087 seconds
+collecting vectors from dataset [fpocket.ds]
+processing [1a82a_out.pdb] (1/4)
+processing [1aaxa_out.pdb] (2/4)
+processing [1t7qa_out.pdb] (3/4)
+processing [2ck3b_out.pdb] (4/4)
+processed 8 ligands in 4 files
+extracted 5826 vectors...  positives:688 negatives:5138 ratio:0.1339
+preparing instance dataset....
+collecting vectors finished in 0 hours 0 minutes 0.906 seconds
+vectors collected in 0 hours 0 minutes 0.908 seconds
+training model using 9 threads
+training classifier cz.siret.prank.fforest.FasterForest on dataset with 5826 instances
+model trained in 0 hours 0 minutes 0.082 seconds
+model prepared in 0 hours 0 minutes 0.083 seconds
+evaluating residue prediction on dataset [test.ds]
+processing [1a82a.pdb] (1/5)
+processing [1aaxa.pdb] (2/5)
+processing [1nlu.pdb] (3/5)
+processing [1t7qa.pdb] (4/5)
+processing [2ck3b.pdb] (5/5)
+
+
+classifier:  FasterForest 
+
+	TN   	 FP	 (spc)
+	FN   	 TP	 (r)
+	(npv)	(p)
+
+N:	19166.0	 544.0 positives + 18622.0 negatives	 Ratio: 0.0292
+pred:  	 [0]	  [1]
+obs[0] 	 17807.0	  815.0	 95.6
+obs[1] 	 161.0	  383.0	 70.4
+       	 99.1	  32.0
+
+%:
+	 92.9	 4.3
+	 .8	 2.0
+
+ACC:	 0.9491	 accuracy
+P:	 0.3197	 precision / positive predictive value    		TP / (TP + FP)
+R:	 0.704	 recall / sensitivity / true positive rate		TP / (TP + FN)
+NPV:	 0.991	 negative predictive value       		TN / (TN + FN)
+SPC:	 0.9562	 specificity / true negative rate		TN / (TN + FP)
+
+TPX:	 0.2818	 TP / (TP + FN + FP)
+AUPRC:	 0.5187	 area under PR curve
+AUC:	 0.9211	 area under ROC curve
+F1:	 0.4397	 f-measure
+MCC:	 0.453	 Matthews correlation coefficient
+
+classifier:  Residue classification 
+
+	TN   	 FP	 (spc)
+	FN   	 TP	 (r)
+	(npv)	(p)
+
+N:	1394.0	 106.0 positives + 1288.0 negatives	 Ratio: 0.0823
+pred:  	 [0]	  [1]
+obs[0] 	 657.0	  631.0	 51.0
+obs[1] 	 1.0	  105.0	 99.1
+       	 99.8	  14.3
+
+%:
+	 47.1	 45.3
+	 .1	 7.5
+
+ACC:	 0.5466	 accuracy
+P:	 0.1427	 precision / positive predictive value    		TP / (TP + FP)
+R:	 0.9906	 recall / sensitivity / true positive rate		TP / (TP + FN)
+NPV:	 0.9985	 negative predictive value       		TN / (TN + FN)
+SPC:	 0.5101	 specificity / true negative rate		TN / (TN + FP)
+
+TPX:	 0.1425	 TP / (TP + FN + FP)
+AUPRC:	 0.682	 area under PR curve
+AUC:	 0.9517	 area under ROC curve
+F1:	 0.2494	 f-measure
+MCC:	 0.2658	 Matthews correlation coefficient
+
+
+
+evaluated residue labelng prediction in 5 files
+model evaluation finished in 0 hours 0 minutes 1.624 seconds
+results saved to directory [/Users/junwoopark/Desktop/Junwoo/Faculty/Master/M2/MEETU/p2rank/distro/test_output/traineval_test]
+evaluation routine on dataset [test.ds] finished in 0 hours 0 minutes 1.630 seconds
+]]></system-out>
+  <system-err><![CDATA[Dec 15, 2022 11:13:31 PM com.github.fommil.jni.JniLoader liberalLoad
+INFO: successfully loaded /var/folders/kt/5rn39gbd34vddx14d4nwxm8m0000gn/T/jniloader13941497481824454028netlib-native_system-osx-x86_64.jnilib
+]]></system-err>
+</testsuite>

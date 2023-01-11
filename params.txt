@@ -1,0 +1,15 @@
+@data
+protein=data/protein/6zsl_chainA.pdb
+ligand=data/ligand
+
+@pocket
+pocket_probability=0.5
+
+@docking
+size_x=20  # size in the X dimension (Angstroms)
+size_y=20
+size_z=20
+flex=None  # flexible side chains, if any (PDBQT)
+exhaustiveness=8  # exhaustiveness of the global search (roughly proportional to time): 1+
+num_modes=9  # maximum number of binding modes to generate
+energy_range=3
