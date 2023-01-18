@@ -11,6 +11,13 @@ from scoring import scoring as sc
 
 
 def pipe_main(protein, pockets, ligand, docking_params, path) -> []:
+    platform = sys.platform
+    if platform.lower() == 'darwin':
+        docking_model = 'vina'
+        scoring_model = 'Convex-PL'
+    else:
+        docking_model = 'vina_linux'
+        scoring_model = 'Convex-PL_linux'
     scores = []
     pockets_center = []
     ligand_name = re.split('\.', ligand)[0]
@@ -30,10 +37,10 @@ def pipe_main(protein, pockets, ligand, docking_params, path) -> []:
         pockets_center.append([pocket[1], pocket[2], pocket[3]])
         Docking.docking(receptor=protein_name + '.pdbqt', ligand=ligand_name + '.pdbqt', x=pocket[1],
                         y=pocket[2], z=pocket[3], output='ligand_vina_'+pocket[0]+'.pdbqt',
-                        docking_params=docking_params, path=path)
+                        docking_params=docking_params, path=path, model=docking_model)
         p_lid = Conversion.conversion('ligand_vina_'+pocket[0]+'.pdbqt', ligand_name, pid=protein_name+'@'+pocket[0],
                                       path=path, gen_ligand=1)
-        scores.append(sc.parse_score(model='Convex-PL', receptor=protein, ligand=ligand_name, plid=p_lid, path=path))
+        scores.append(sc.parse_score(model=scoring_model, receptor=protein, ligand=ligand_name, plid=p_lid, path=path))
 
     try:
         for pocket in pockets:
@@ -78,5 +85,4 @@ if __name__ == '__main__':
         # check if ligand is single-model file
         score, centers = pipe_main(pdb_id, pockets, ligand, docking_params, path)
         scores.append(score)
-
     MakeReport.write_report(scores, centers, path=path)

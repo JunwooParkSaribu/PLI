@@ -2,7 +2,7 @@ import subprocess
 
 
 def docking(receptor, ligand, x, y, z, output, docking_params=['20', '20', '20', None, '8', '9', '3'], path='', model='vina'):
-    print(f'\nDocking {ligand} with {receptor}...')
+    print(f'Docking {ligand} with {receptor}...\n')
     model = './' + model
     model_path = path + '/docking/'
     path = path + '/'

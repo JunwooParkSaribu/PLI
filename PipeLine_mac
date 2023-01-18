@@ -1,0 +1,8 @@
+#!/bin/sh
+# start pipeline
+
+cur_dir=$(dirname "$0")
+
+echo Shell path : "$cur_dir"
+
+$cur_dir/./main_mac $cur_dir
