@@ -1,8 +1,14 @@
 Original source : https://github.com/meetU-MasterStudents/2022--2023-SU-Team3 <br>
 
+# 2022-2023-Sorbonne University-Team SAJAS <br>
+Report : report/report.pdf <br>
+Digest : report/report_2pages.pdf <br>
+Members : Stéphane Wang, Alix Bonard, Junwoo Park, Assane Fall, Samuel Lalam<br>
+<br>
 <h3>Requirement</h3>
 1. openbabel<br>
-2. Java version 8 to 18<br><br>
+2. Java version 8 to 18<br>
+3. Python 3.10 if GLIBC_2.35 err <br><br>
 
 <h3>Purpose</h3> 
 Constructing the pipeline of 
@@ -44,3 +50,8 @@ p2rank : https://jcheminf.biomedcentral.com/articles/10.1186/s13321-018-0285-8 <
 Autodock Vina : https://vina.scripps.edu/ <br>
 Convex-PL : https://team.inria.fr/nano-d/software/convex-pl/ <br>
 <br>
+<br>
+
+
+![](https://github.com/JunwooParkSaribu/PLI/blob/main/img/red_withligand.gif)
+
