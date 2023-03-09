@@ -20,6 +20,8 @@ Constructing the pipeline of
 3. protein-ligand interaction scoring
 <br>
 
+![](https://github.com/JunwooParkSaribu/PLI/blob/main/img/pipeline_flowchart.png)
+
 <br>
 <h3>Tutorial</h3>
 Installation of openbabel : In terminal, install openbabel<br>
