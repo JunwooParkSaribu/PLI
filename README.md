@@ -1,9 +1,9 @@
 Original source : https://github.com/meetU-MasterStudents/2022--2023-SU-Team3 <br>
 
 # 2022-2023-Sorbonne University-Team SAJAS <br>
-Report : report/report.pdf <br>
-Digest : report/report_2pages.pdf <br>
+
 Members : Stéphane Wang, Alix Bonard, Junwoo Park, Assane Fall, Samuel Lalam<br>
+
 <br>
 <h3>Requirement</h3>
 1. openbabel<br>
